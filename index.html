@@ -263,6 +263,27 @@
     .commit li{font-size:12px;padding-left:14px;}
   }
 
+  /* PROJECTS */
+  .project-grid{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:20px;}
+  .project-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;
+    transition:transform .18s, border-color .18s;
+  }
+  .project-card:hover{transform:translateY(-3px);border-color:var(--teal);}
+  .project-badge{
+    display:inline-block;font-family:var(--mono);font-size:11px;color:var(--amber);
+    background:rgba(232,163,61,0.12);padding:3px 8px;border-radius:20px;border:1px solid rgba(232,163,61,0.3);
+    margin-bottom:14px;
+  }
+  .project-card h3{font-family:var(--display);font-size:20px;margin-bottom:12px;}
+  .project-card p{color:var(--muted);font-size:14px;margin-bottom:14px;}
+  .project-points{list-style:none;display:grid;gap:8px;}
+  .project-points li{position:relative;padding-left:18px;color:#C4CFDA;font-size:13.5px;}
+  .project-points li::before{content:"›";position:absolute;left:0;color:var(--teal);font-weight:700;}
+  @media (max-width:760px){
+    .project-grid{grid-template-columns:1fr;}
+  }
+
   /* AI TOOLKIT */
   .ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
   @media (max-width:1024px){.ai-grid{grid-template-columns:repeat(2,1fr);}}
@@ -352,6 +373,7 @@
     <nav class="links">
       <a href="#about">about</a>
       <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
       <a href="#experience">experience</a>
       <a href="#ai">ai-toolkit</a>
       <a href="#contact">contact</a>
@@ -378,7 +400,7 @@
   <section id="about">
     <div class="section-head"><span class="section-tag">01</span><h2 class="section-title">About</h2></div>
     <p class="about-text">
-      I'm a <strong>Full Stack Engineer</strong> based in Coimbatore, India, specializing in <strong>.NET Core, React.js, and SQL Server</strong>. Over the past 7+ years I've led legacy-to-modern[
+      I'm a <strong>Full Stack Engineer</strong> based in Coimbatore, India, specializing in <strong>.NET Core, React.js, and SQL Server</strong>. Over the past 7+ years I've led legacy-to-modern platform transformations, built enterprise-grade APIs, and shipped production software with measurable operational improvements. I enjoy turning complex business workflows into reliable digital systems that teams can actually use and scale.
     </p>
     <div class="stat-row">
       <div class="stat"><div class="num">7+</div><div class="label">Years Experience</div></div>
@@ -471,8 +493,35 @@
     </div>
   </section>
 
+  <section id="projects">
+    <div class="section-head"><span class="section-tag">04</span><h2 class="section-title">Featured Projects</h2></div>
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-badge">enterprise modernization</div>
+        <h3>Applied Materials Platform Modernization</h3>
+        <p>Modernized a legacy operational platform for a global manufacturing environment, replacing brittle workflows with a scalable .NET Core and React-based architecture.</p>
+        <ul class="project-points">
+          <li>Reduced downtime by 30% after optimization and deployment automation</li>
+          <li>Improved efficiency by 25% through streamlined workflows and APIs</li>
+          <li>Built and managed Jenkins CI/CD pipelines for OCP and IIS environments</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-badge">healthcare product</div>
+        <h3>COVID-19 Management Portal</h3>
+        <p>Owned the end-to-end delivery of a healthcare product for a US client, translating operational requirements into a functional product used by care teams and stakeholders.</p>
+        <ul class="project-points">
+          <li>Delivered React.js frontend with .NET Core API integration</li>
+          <li>Improved product adoption by 20% through user-focused UX improvements</li>
+          <li>Managed product lifecycle from requirements gathering to deployment</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
   <section id="ai">
-    <div class="section-head"><span class="section-tag">04</span><h2 class="section-title">AI Toolkit</h2></div>
+    <div class="section-head"><span class="section-tag">05</span><h2 class="section-title">AI Toolkit</h2></div>
     <div class="ai-grid">
       <div class="ai-card">
         <span class="badge">daily driver</span>
@@ -493,7 +542,7 @@
   </section>
 
   <section id="education">
-    <div class="section-head"><span class="section-tag">05</span><h2 class="section-title">Education &amp; Recognition</h2></div>
+    <div class="section-head"><span class="section-tag">06</span><h2 class="section-title">Education &amp; Recognition</h2></div>
     <div class="two-col">
       <div>
         <div class="card-title">Education &amp; Certifications</div>
